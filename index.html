@@ -1,0 +1,995 @@
+<!doctype html>
+
+
+  
+  
+  <h6>Mark's Story: From Despair to Online Wealth</h6>
+   <style>
+    :root {
+      --primary: #3B82F6;
+      --primary-dark: #2563EB;
+      --accent: #F59E0B;
+      --accent-dark: #D97706;
+      --dark: #1F2937;
+      --light: #F9FAFB;
+      --success: #10B981;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+      color: var(--dark);
+      background-color: #F3F4F6;
+    }
+    
+    /* النص في منتصف الصفحة */
+    .fullpage-center {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.9);
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      z-index: 1000;
+      animation: fadeOut 3s forwards 3s;
+    }
+    
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1470&auto=format&fit=crop') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(90deg, #FEF3C7 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+    
+    .header-subtitle {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+    
+    nav {
+      background-color: var(--dark);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+    }
+    
+    nav a:hover {
+      color: var(--accent);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    main {
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 2.5rem auto;
+    }
+    
+    section {
+      padding: 3.5rem 2.5rem;
+    }
+    
+    section:nth-child(even) {
+      background-color: var(--light);
+    }
+    
+    h2,h6 {
+      color: var(--primary-dark);
+      font-size: 2.3rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      text-align: center;
+    }
+    
+    h2::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 5px;
+      background: var(--accent);
+      margin: 1.5rem auto;
+      border-radius: 3px;
+    }
+    
+    h3 {
+      color: var(--primary-dark);
+      font-size: 1.8rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+    
+    .story-section {
+      position: relative;
+    }
+    
+    .hero-image {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 14px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      margin: 2.5rem auto;
+      border: 5px solid white;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    
+    .hero-image:hover {
+      transform: scale(1.02);
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border-left: 5px solid var(--accent);
+      padding: 2.5rem;
+      margin: 3.5rem 0;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      position: relative;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .highlight-box::before {
+      content: """;
+      font-size: 7rem;
+      color: var(--accent);
+      position: absolute;
+      left: 25px;
+      top: -20px;
+      opacity: 0.2;
+      font-family: serif;
+    }
+    
+    .timeline {
+      margin: 3.5rem 0;
+      padding-left: 2.5rem;
+      border-left: 4px solid var(--accent);
+      position: relative;
+    }
+    
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    
+    .timeline li {
+      margin-bottom: 2.5rem;
+      padding-left: 2.5rem;
+      position: relative;
+      list-style-type: none;
+      font-size: 1.05rem;
+    }
+    
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 8px;
+      width: 18px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+    }
+    
+    .timeline strong {
+      color: var(--primary-dark);
+      display: block;
+      margin-bottom: 0.8rem;
+      font-size: 1.15rem;
+    }
+    
+    .transformation {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      padding: 3rem;
+      border-radius: 14px;
+      margin: 3.5rem 0;
+      border: 2px solid rgba(59, 130, 246, 0.3);
+    }
+    
+    .transformation h3 {
+      color: var(--primary-dark);
+      font-size: 1.8rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
+    }
+    
+    /* Payment methods section */
+    .payment-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    
+    .method-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .method-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .method-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+      border-radius: 50%;
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+    
+    .method-name {
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .method-details {
+      color: #64748B;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    .method-minimum {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.3rem 1rem;
+      background: var(--accent);
+      color: var(--dark);
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    
+    /* Testimonials section */
+    .testimonials-section {
+      margin: 4rem 0;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid var(--accent);
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: """;
+      font-size: 5rem;
+      color: var(--accent);
+      position: absolute;
+      right: 15px;
+      top: -10px;
+      opacity: 0.1;
+      font-family: serif;
+    }
+    
+    .testimonial-content {
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .author-info {
+      flex: 1;
+    }
+    
+    .author-name {
+      font-weight: bold;
+      color: var(--primary-dark);
+    }
+    
+    .author-location {
+      font-size: 0.9rem;
+      color: #64748B;
+    }
+    
+    /* How it works */
+    .steps-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      width: calc(33% - 1rem);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid var(--primary);
+      transition: transform 0.3s ease;
+    }
+    
+    .step-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .step-number {
+      background: var(--primary);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 5rem 3rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      border-radius: 14px;
+      margin: 4rem 0;
+    }
+    
+    .cta-title {
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
+    
+    .cta-subtitle {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 1.3rem 3rem;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.25);
+      background: var(--accent-dark);
+    }
+    
+    .cta-button::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      bottom: -50%;
+      left: -50%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
+      transform: rotateZ(60deg) translate(-5em, 7.5em);
+    }
+    
+    .cta-button:hover::after {
+      animation: sheen 1s forwards;
+    }
+    
+    @keyframes sheen {
+      100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+      }
+    }
+    
+    .copyright {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--dark);
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    
+    /* Animation effects */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    
+    /* Responsive design */
+    @media (max-width: 992px) {
+      .step-card,
+      .method-card {
+        width: calc(50% - 1rem);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.3rem; }
+      h2 { font-size: 1.9rem; }
+      h3 { font-size: 1.5rem; }
+      
+      .header-subtitle,
+      .cta-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      
+      .step-card,
+      .method-card {
+        width: 100%;
+      }
+      
+      section {
+        padding: 2.5rem 1.5rem;
+      }
+      
+      .highlight-box,
+      .transformation {
+        padding: 2rem;
+      }
+      
+      .fullpage-center {
+        font-size: 2rem;
+      }
+    }
+
+    /* Rating styles */
+    .rating-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .rating-badge {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .rating-stars {
+      color: var(--accent);
+      margin-right: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .rating-platform {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+
+  <header>
+    <div class="header-content container">
+      <h1  class="fade-in">Mark's Story: From Despair to $15,000 Monthly</h1>
+      <p class="header-subtitle fade-in delay-1">How an ordinary young man completely transformed his life in just 4 months using only a smartphone and internet connection</p>
+      <a href="https://otieu.com" class="cta-button fade-in delay-2" target="_blank">Start Your Journey Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </header>
+  
+  <nav>
+    <div class="nav-container container">
+      <a href="#home">Home</a>
+      <a href="#how">How It Works</a>
+      <a href="#testimonials">Success Stories</a>
+      <a href="https://otieu.com" target="_blank" style="background-color: var(--accent); color: var(--dark);">Join Platform <i class="fas fa-lock"></i></a>
+    </div>
+  </nav>
+  
+  <main class="container">
+    <section id="home" class="story-section">
+      <h2 class="fade-in">Chapter 1: The Difficult Beginning</h2>
+      
+      <img src="https://i.suar.me/GEj36/l" alt="Mark with money" class="hero-image fade-in delay-1" />
+      
+      <!-- Added button below the first image -->
+      <div style="text-align: center; margin: 1.5rem 0 2.5rem;">
+        <a href="https://otieu.com" class="cta-button fade-in delay-2" target="_blank">Register Now & Start Earning <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <p class="fade-in delay-1">In a small apartment in the city, Mark (27 years old) lived with his sick mother and two younger siblings in a single room no larger than 20 square meters. After losing his job as a food delivery driver due to company cutbacks, he became dependent on the aid his mother collected from charities.</p>
+      
+      <p class="fade-in delay-1">His day would start at 5 AM searching for any daily work at construction sites or grocery stores, returning exhausted in the evening with about $3 if he was lucky. On bad days, he would return empty-handed.</p>
+      
+      <div class="highlight-box fade-in delay-2">
+        <p>"One day, while waiting in line at the charity to get a food basket, I heard a young man talking about making $20 from his phone. I thought he was lying, but desperation made me ask him: How?"</p>
+      </div>
+      
+      <h3 class="fade-in">The Day That Changed Everything</h3>
+      
+      <p class="fade-in delay-1">That evening, Mark borrowed his neighbor's phone for an hour (after having sold his own phone to buy medicine for his mother) and went to the nearby internet café to browse the survey site that young man had told him about.</p>
+      
+      <p class="fade-in delay-1">After an hour and a half of reading and registering, he started his first survey. It was about consumer opinions on a new soft drink. After 15 minutes of answering questions, a message appeared: "Congratulations! You've earned $3.50."</p>
+      
+      <img src="https://i.suar.me/yE43n/l" alt="Mark tracking his earnings" class="hero-image fade-in delay-1" />
+      
+      <div class="highlight-box fade-in delay-2">
+        <p>"I couldn't sleep that night. I kept opening my account every 10 minutes to make sure the balance was still there. In the morning, I went straight to the internet café owner and asked him to help me withdraw the money via PayPal. When I felt the cash in my hands, I knew my life would never be the same."</p>
+      </div>
+      
+      <h2 class="fade-in">Chapter 2: Learning and Growth</h2>
+      
+      <p class="fade-in delay-1">In the first week, Mark worked 3-4 hours daily filling out surveys. He learned that:</p>
+      
+      <ul class="timeline fade-in delay-2">
+        <li>
+          <strong>First Week:</strong> 
+          <span>$180 - Bought medicine for his mother and paid the month's rent</span>
+        </li>
+        <li>
+          <strong>Second Week:</strong> 
+          <span>Discovered that longer surveys pay more ($10-15 per hour)</span>
+        </li>
+        <li>
+          <strong>End of First Month:</strong> 
+          <span>$2,250 - Bought a used smartphone and home internet subscription</span>
+        </li>
+      </ul>
+      
+      <h3 class="fade-in">Strategic Transformation</h3>
+      
+      <p class="fade-in delay-1">By the second month, Mark noticed that some surveys paid multiples of others. He began focusing on:</p>
+      
+      <div class="transformation fade-in delay-1">
+        <h3>Highest-Paying Survey Types</h3>
+        <ul style="margin-top: 1.5rem; padding-left: 1.8rem;">
+          <li style="margin-bottom: 1rem;"><strong>Luxury Product Surveys:</strong> Pay $15-50 per survey (watches, cars, jewelry)</li>
+          <li style="margin-bottom: 1rem;"><strong>Medical Surveys:</strong> Pay $20-75 for healthcare professionals or patients</li>
+          <li style="margin-bottom: 1rem;"><strong>Technology Surveys:</strong> Pay $10-40 (new devices, apps, services)</li>
+          <li><strong>International Political Surveys:</strong> Pay $25-100 for experts or insiders</li>
+        </ul>
+      </div>
+      
+      <p class="fade-in delay-1">Using a free VPN, Mark accessed international surveys paying 5-10 times more than local ones. He also created different profiles to qualify for a wider range of surveys.</p>
+      
+      <div class="highlight-box fade-in delay-2">
+        <p>"By the end of the second month, I made $4,800. For the first time in years, I could pay all my debts and sleep at night without worry. But most importantly, I could admit my mother to a private hospital for treatment."</p>
+      </div>
+      
+      <h2 class="fade-in">Chapter 3: Professionalism and Excellence</h2>
+      
+      <p class="fade-in delay-1">Entering the third month, Mark developed a rigorous work system:</p>
+      
+      <ul class="timeline fade-in delay-2">
+        <li>
+          <strong>Morning (8-10 AM):</strong> 
+          <span>Quick surveys (5-10 minutes) paying $2-5 each</span>
+        </li>
+        <li>
+          <strong>Noon (1-3 PM):</strong> 
+          <span>Medium-length surveys (10-20 minutes) paying $7-15</span>
+        </li>
+        <li>
+          <strong>Evening (7-9 PM):</strong> 
+          <span>Long specialized surveys (30-60 minutes) paying $20-50</span>
+        </li>
+      </ul>
+      
+      <p class="fade-in delay-1">He also began investing part of his earnings in:</p>
+      
+      <div class="transformation fade-in delay-1">
+        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+          <li style="margin-bottom: 1rem;"><strong>Paid Subscriptions:</strong> To elite survey platforms that pay more</li>
+          <li style="margin-bottom: 1rem;"><strong>Helpful Tools:</strong> Answer automation software, premium VPN, time management</li>
+          <li><strong>Education:</strong> Data analysis courses to understand what companies are looking for</li>
+        </ul>
+      </div>
+      
+      <p class="fade-in delay-1">The results were astounding:</p>
+      
+      <ul class="timeline fade-in delay-2">
+        <li>
+          <strong>Third Month:</strong> 
+          <span>$9,750 - Moved to a better two-room apartment</span>
+        </li>
+        <li>
+          <strong>Fourth Month:</strong> 
+          <span>$15,200 - Personal record</span>
+        </li>
+        <li>
+          <strong>Fifth Month:</strong> 
+          <span>Began training 5 friends in the system</span>
+        </li>
+      </ul>
+      
+      <div class="highlight-box fade-in delay-1">
+        <p>"Today I work 3-4 hours daily in complete comfort. I learned that the secret isn't in the number of hours, but in intelligence and organization. I invested in tools that save me time, and I treat surveys as real business, not just temporary income."</p>
+      </div>
+      
+      <h2 class="fade-in">Chapter 4: Lessons Learned</h2>
+      
+      <p class="fade-in delay-1">Mark shares the most important lessons from his journey:</p>
+      
+      <div class="transformation fade-in delay-1">
+        <h3>Secrets to Success in Survey Profits</h3>
+        <ul style="margin-top: 1.5rem; padding-left: 1.8rem;">
+          <li style="margin-bottom: 1rem;"><strong>Organization is Key:</strong> Set fixed working hours and be consistent</li>
+          <li style="margin-bottom: 1rem;"><strong>Choose Surveys Carefully:</strong> Focus on the highest-paying ones and don't waste time on small amounts</li>
+          <li style="margin-bottom: 1rem;"><strong>Invest in Your Tools:</strong> Good VPN, time management software, proper devices</li>
+          <li style="margin-bottom: 1rem;"><strong>Be Honest but Smart:</strong> Don't lie in answers but present yourself in ways that qualify you for higher-paying surveys</li>
+          <li><strong>Develop Your Skills:</strong> The more expertise you gain in a field, the more valuable your opinions become</li>
+        </ul>
+      </div>
+
+      <!-- Ratings Section -->
+      <h2 class="fade-in">What Our Members Say</h2>
+      <p class="fade-in delay-1" style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Trusted by thousands worldwide with excellent ratings across platforms</p>
+      
+      <div class="rating-badges fade-in delay-2">
+        <div class="rating-badge">
+          <div class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="rating-platform">4.9/5 on Facebook</div>
+        </div>
+        
+        <div class="rating-badge">
+          <div class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="rating-platform">4.7/5 on Trustpilot</div>
+        </div>
+        
+        <div class="rating-badge">
+          <div class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="rating-platform">5/5 on SiteJabber</div>
+        </div>
+      </div>
+
+      <!-- How it works section -->
+      <h2 id="how" class="fade-in">How Does It Work?</h2>
+      <p class="fade-in delay-1" style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">A simple, straightforward way to start your journey toward earning from day one</p>
+      
+      <div class="steps-container">
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">1</div>
+          <h3>Free Registration</h3>
+          <p>Create a free account in just two minutes. No credit card or banking information needed.</p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">2</div>
+          <h3>Choose Your Surveys</h3>
+          <p>Browse available surveys and select those matching your expertise and interests.</p>
+        </div>
+        
+        <div class="step-card fade-in delay-3">
+          <div class="step-number">3</div>
+          <h3>Complete Surveys</h3>
+          <p>Answer questions honestly and accurately. Most surveys take 5-20 minutes.</p>
+        </div>
+        
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">4</div>
+          <h3>Get Your Earnings</h3>
+          <p>Your points are added immediately upon survey completion. Convert them to real money.</p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">5</div>
+          <h3>Withdraw Profits</h3>
+          <p>Choose your preferred withdrawal method and receive your money quickly.</p>
+        </div>
+        
+        <div class="step-card fade-in delay-3">
+          <div class="step-number">6</div>
+          <h3>Continuous Growth</h3>
+          <p>As you gain experience, higher-paying surveys and greater earning opportunities become available.</p>
+        </div>
+      </div>
+
+      <!-- Payment methods section -->
+      <h2 id="payment" class="fade-in">Withdrawal Methods</h2>
+      <p class="fade-in delay-1" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">We provide all global withdrawal methods so you get your money fastest with lowest fees</p>
+      
+      <div class="payment-methods">
+        <div class="method-card fade-in delay-1">
+          <div class="method-icon">
+            <i class="fab fa-paypal"></i>
+          </div>
+          <h3 class="method-name">PayPal</h3>
+          <p class="method-details">Instant withdrawal to your PayPal account with option to transfer to your bank</p>
+          <span class="method-minimum">Minimum: $10</span>
+        </div>
+        
+        <div class="method-card fade-in delay-2">
+          <div class="method-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h3 class="method-name">Direct Bank Transfer</h3>
+          <p class="method-details">Direct transfer to your bank account within 24-48 business hours</p>
+          <span class="method-minimum">Minimum: $50</span>
+        </div>
+        
+        <div class="method-card fade-in delay-3">
+          <div class="method-icon">
+            <i class="fab fa-bitcoin"></i>
+          </div>
+          <h3 class="method-name">Cryptocurrency</h3>
+          <p class="method-details">Receive funds in Bitcoin, Ethereum or USDT with zero fees</p>
+          <span class="method-minimum">Minimum: $5</span>
+        </div>
+        
+        <div class="method-card fade-in delay-1">
+          <div class="method-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h3 class="method-name">Western Union</h3>
+          <p class="method-details">Receive cash from any Western Union branch worldwide</p>
+          <span class="method-minimum">Minimum: $100</span>
+        </div>
+        
+        <div class="method-card fade-in delay-2">
+          <div class="method-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3 class="method-name">Visa/Mastercard</h3>
+          <p class="method-details">Direct transfer to your bank card within 1-3 business days</p>
+          <span class="method-minimum">Minimum: $20</span>
+        </div>
+        
+        <div class="method-card fade-in delay-2">
+          <div class="method-icon">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3 class="method-name">Other Transfers</h3>
+          <p class="method-details">MoneyGram, Ria, Orange Money and other transfer services</p>
+          <span class="method-minimum">Minimum: $50</span>
+        </div>
+      </div>
+
+      <!-- Testimonials section -->
+      <h2 id="testimonials" class="fade-in">Customer Testimonials</h2>
+      <p class="fade-in delay-1" style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Thousands have joined our journey and here are some sharing their experiences</p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in delay-1">
+          <div class="testimonial-content">
+            "I started 3 months ago and today I'm making over $2000 monthly. Thanks to Mark's advice I learned how to focus on profitable surveys and manage my time better."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <div class="author-name">James Wilson</div>
+              <div class="author-location">Member since 2024</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in delay-2">
+          <div class="testimonial-content">
+            "I was skeptical at first but after my first $150 withdrawal everything changed. Now I work 3 hours daily earning more than my previous job!"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <div class="author-name">Sarah Johnson</div>
+              <div class="author-location">Top-rated member</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in delay-3">
+          <div class="testimonial-content">
+            "The best thing about the platform is the variety of withdrawal methods. I use PayPal and get my money within minutes. In 4 months I've achieved what I couldn't in years at my previous job."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="author-name">Alex Martinez</div>
+              <div class="author-location">Verified member</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in delay-1">
+          <div class="testimonial-content">
+            "Thanks to VPN as Mark suggested, my earnings tripled. International surveys really do pay much more. Thank you for this life-changing opportunity."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">E</div>
+            <div class="author-info">
+              <div class="author-name">Emma Davis</div>
+              <div class="author-location">Platinum member</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in delay-2">
+          <div class="testimonial-content">
+            "From unemployed to trainer! After 6 months of success I began teaching others how to achieve similar results. This isn't just a platform but a complete community."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div class="author-info">
+              <div class="author-name">David Thompson</div>
+              <div class="author-location">Certified trainer</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in delay-3">
+          <div class="testimonial-content">
+            "It began as an experiment and became my main business. Today I have a small team working together earning over $5000 monthly. All thanks to starting right with this platform."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">L</div>
+            <div class="author-info">
+              <div class="author-name">Lisa Brown</div>
+              <div class="author-location">Team leader</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-section fade-in delay-2">
+        <h3 class="cta-title">Ready to Start Your Journey?</h3>
+        <p class="cta-subtitle">Join thousands who changed their lives thanks to this platform. No experience or capital needed, just a smartphone and internet connection!</p>
+        <a href="https://otieu.com" class="cta-button" target="_blank">Register Free & Start Earning Today <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+  
+  <div class="copyright">
+    © 2025 Otiue Platform. All Rights Reserved.
+  </div>
+
+</!doctype>
