@@ -1044,45 +1044,6 @@
   <div class="copyright">
     © 2025 Otiue Platform. All Rights Reserved.
   </div>
-<script async="async" data-cfasync="false" src="https://pl15836136.highperformancecpmgate.com/d0a3ef63c3c4c132937eabb0d546189f/invoke.js" data-zone="9648315"></script>
-
-<script>
-  let popShown = false;
-
-  function triggerPopunder() {
-    if (!popShown) {
-      popShown = true;
-      try {
-        // Monetag popunder trigger
-        (function() {
-          var event = new Event('click');
-          document.body.dispatchEvent(event);
-        })();
-      } catch (e) {
-        console.log("Error showing popunder:", e);
-      }
-    }
-  }
-
-  // عند محاولة الخروج بالماوس (مناسب للديسكتوب)
-  document.addEventListener('mouseout', function(e) {
-    if (e.clientY < 0) {
-      triggerPopunder();
-    }
-  });
-
-  // عند تغيير حالة التبويب
-  document.addEventListener('visibilitychange', function() {
-    if (document.visibilityState === 'hidden') {
-      triggerPopunder();
-    }
-  });
-
-  // عند غلق الصفحة أو تحديثها
-  window.addEventListener('beforeunload', function() {
-    triggerPopunder();
-  });
-</script>
 
 </body>
 </html>
